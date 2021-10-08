@@ -1,65 +1,74 @@
-<mat-form-field appearance="fill">
-  <mat-label>Font size</mat-label>
-  <mat-select #fontSize value="16px" (selectionChange)="triggerResize()">
-    <mat-option value="10px">10px</mat-option>
-    <mat-option value="11px">11px</mat-option>
-    <mat-option value="12px">12px</mat-option>
-    <mat-option value="14px">14px</mat-option>
-    <mat-option value="15px">15px</mat-option>
-    <mat-option value="16px">16px</mat-option>
-    <mat-option value="18px">18px</mat-option>
-    <mat-option value="20px">20px</mat-option>
-  </mat-select>
-</mat-form-field>
-<mat-form-field
-  style="width: 100%"
-  [style.fontSize]="fontSize.value"
-  appearance="fill"
->
-  <mat-label>Autosize textarea</mat-label>
-  <textarea
-    matInput
-    cdkTextareaAutosize
-    #autosize="cdkTextareaAutosize"
-    cdkAutosizeMinRows="1"
-    cdkAutosizeMaxRows="5"
-  ></textarea>
-</mat-form-field>
-<div *ngIf="showTemp; else loading">hello</div>
-<ng-template #loading>
-  <button class="btn-hover color-1" (click)="login()"></button>
-  <button class="btn-hover color-1" (click)="signUp()"></button>
-</ng-template>
-<div class="example-button-row">
-  <button (click)="navigateToConverter()" mat-raised-button color="primary">
-    Navigate to UserForm
-  </button>
+<div class="sidenav">
+  <a (click)="navigateToConverter()">About</a>
+  <a (click)="navigateToConverter()">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
-<div class="buttons">
-  <button class="btn-hover color-1">BUTTON</button>
-  <button class="btn-hover color-2">BUTTON</button>
-  <button class="btn-hover color-3">BUTTON</button>
-  <button class="btn-hover color-4">BUTTON</button>
-  <button class="btn-hover color-5">BUTTON</button>
-  <button class="btn-hover color-6">BUTTON</button>
-  <button class="btn-hover color-7">BUTTON</button>
-  <button class="btn-hover color-8">BUTTON</button>
-  <button class="btn-hover color-9">BUTTON</button>
-  <button class="btn-hover color-10">BUTTON</button>
-  <button class="btn-hover color-11">BUTTON</button>
-</div>
-<div id="holder">
-  <div class="button">
-    <p class="btnText">READY?</p>
-    <div class="btnTwo">
-      <p class="btnText2">GO!</p>
-    </div>
+<div class="main">
+  <mat-form-field appearance="fill">
+    <mat-label>Font size</mat-label>
+    <mat-select #fontSize value="16px" (selectionChange)="triggerResize()">
+      <mat-option value="10px">10px</mat-option>
+      <mat-option value="11px">11px</mat-option>
+      <mat-option value="12px">12px</mat-option>
+      <mat-option value="14px">14px</mat-option>
+      <mat-option value="15px">15px</mat-option>
+      <mat-option value="16px">16px</mat-option>
+      <mat-option value="18px">18px</mat-option>
+      <mat-option value="20px">20px</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field
+    style="width: 100%"
+    [style.fontSize]="fontSize.value"
+    appearance="fill"
+  >
+    <mat-label>Autosize textarea</mat-label>
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="5"
+    ></textarea>
+  </mat-form-field>
+  <div *ngIf="showTemp; else loading">hello</div>
+  <ng-template #loading>
+    <button class="btn-hover color-1" (click)="login()"></button>
+    <button class="btn-hover color-1" (click)="signUp()"></button>
+  </ng-template>
+  <div class="example-button-row">
+    <button (click)="navigateToConverter()" mat-raised-button color="primary">
+      Navigate to UserForm
+    </button>
   </div>
+  <div class="buttons">
+    <button class="btn-hover color-1">BUTTON</button>
+    <button class="btn-hover color-2">BUTTON</button>
+    <button class="btn-hover color-3">BUTTON</button>
+    <button class="btn-hover color-4">BUTTON</button>
+    <button class="btn-hover color-5">BUTTON</button>
+    <button class="btn-hover color-6">BUTTON</button>
+    <button class="btn-hover color-7">BUTTON</button>
+    <button class="btn-hover color-8">BUTTON</button>
+    <button class="btn-hover color-9">BUTTON</button>
+    <button class="btn-hover color-10">BUTTON</button>
+    <button class="btn-hover color-11">BUTTON</button>
+  </div>
+  <div id="holder">
+    <div class="button">
+      <p class="btnText">READY?</p>
+      <div class="btnTwo">
+        <p class="btnText2">GO!</p>
+      </div>
+    </div>
 
-  <div class="button">
-    <p class="btnText">CANCEL</p>
-    <div class="btnTwo">
-      <p class="btnText2">X</p>
+    <div class="button">
+      <p class="btnText">CANCEL</p>
+      <div class="btnTwo">
+        <p class="btnText2">X</p>
+      </div>
     </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
