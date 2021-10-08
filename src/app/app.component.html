@@ -1,0 +1,103 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p>
+  <mat-toolbar>
+    <span>My Application</span>
+  </mat-toolbar>
+</p>
+<!-- <div style="text-align: center">
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Model</mat-label>
+        <input [(ngModel)]="model" autocomplete="off" matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Phone Price</mat-label>
+        <input [(ngModel)]="price" autocomplete="off" matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>first Name</mat-label>
+        <input [(ngModel)]="firstName" autocomplete="off" matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Surname Name</mat-label>
+        <input [(ngModel)]="lastName" autocomplete="off" matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input [(ngModel)]="age" autocomplete="off" matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Favorite User</mat-label>
+        <mat-select (selectionChange)="foo($event)">
+          <mat-option *ngFor="let user of foods" [value]="user.name">
+            {{ user.name }} {{ user.surname }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="fill">
+        <mat-label>Favorite Mobile</mat-label>
+        <mat-select>
+          <mat-option
+            *ngFor="let mobile of products"
+            [value]="mobile.productName"
+          >
+            {{ mobile.productName }} (Price:{{ mobile.cost }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div class="example-button-row">
+    <button (click)="submitForm()" mat-raised-button color="primary">
+      Submit
+    </button>
+  </div>
+  <div class="example-button-row">
+    <button (click)="navigateToConverter()" mat-raised-button color="primary">
+      Navigate to converter
+    </button>
+  </div>
+  <div class="content">
+    <mat-list *ngFor="let i of products | slice: 1" role="list">
+      <mat-list-item role="listitem">
+        {{ i.productName }} (Price:{{ i.cost }})
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="content">
+    <mat-nav-list *ngFor="let i of products | slice: 1">
+      <a mat-list-item>
+        <span style="text-align: left" matLine
+          >{{ i.productName }} (Price:{{ i.cost }})</span
+        >
+       
+        <button mat-icon-button (click)="onRemove(i.ProductId)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </a>
+    </mat-nav-list>
+  </div>
+
+  <router-outlet></router-outlet>
+</div> -->
+<div style="text-align: center">
+  <!-- <div class="example-button-row">
+    <button (click)="navigateToConverter()" mat-raised-button color="primary">
+      Navigate to converter
+    </button>
+  </div> -->
+  <router-outlet></router-outlet>
+</div>
